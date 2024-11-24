@@ -1,0 +1,19 @@
+@@ -932,11 +941,16 @@ c      strange/down with a probability sin^2 theta
+       do j=1,4,1
++         random_d=random()
+          if(abs(iwa(j)).eq.1) then
+-            if(random().lt.sin2cabibbo) then
++            if(random_d.lt.Vus2) then
+                iwa(j)=sign(3,iwa(j))
++            elseif(random_d.ge.Vus2.and.random_d.lt.Vus2+Vub2) then
++               iwa(j)=sign(5,iwa(j))
+             endif
+          elseif(abs(iwa(j)).eq.3) then
+-            if(random().lt.sin2cabibbo) then
++            if(random_d.lt.Vcd2) then
+                iwa(j)=sign(1,iwa(j))
++            elseif(random_d.ge.Vcd2.and.random_d.lt.Vcd2+Vcb2) then
++               iwa(j)=sign(5,iwa(j))
+             endif
+          endif
+       enddo
