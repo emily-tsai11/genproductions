@@ -682,3 +682,8 @@ mv pwhg_main-gnu pwhg_main \n \
 cp -p pwhg_main ${WORKDIR}/${name}/. \n \
 cd -",
     }.get(process,"")
+
+def runGetSource_patch_9(process) :
+  return {
+    "hvq" : "patch -l -p0 -i ${patches_dir}/tttolnu2q_Vcb.patch"
+  }.get(process,"")

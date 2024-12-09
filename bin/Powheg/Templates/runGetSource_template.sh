@@ -3,7 +3,7 @@ export cardInput=$powInputName
 export processtemp=$processtemp
 export noPdfCheck=$noPdfCheck
 export WORKDIR=$rootfolder
-export patches_dir=$patches_dir 
+export patches_dir=$patches_dir
 # Release to be used to define the environment and the compiler needed
 export RELEASE=$${CMSSW_VERSION}
 export jhugenversion="v7.5.2" 
@@ -333,6 +333,8 @@ fi
 #../pwhg_main &> log_$${process}_$${seed}.txt
 
 #cp -p ../runcms*.sh .
+
+$patch_9 
 
 cd $${WORKDIR}
 

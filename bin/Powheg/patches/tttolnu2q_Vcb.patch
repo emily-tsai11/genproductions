@@ -1,3 +1,5 @@
+--- POWHEG-BOX/hvq/ttdec.f
++++ POWHEG-BOX/hvq/ttdec.f
 @@ -932,11 +941,16 @@ c      strange/down with a probability sin^2 theta
        do j=1,4,1
 +         random_d=random()
